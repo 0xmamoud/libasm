@@ -1,0 +1,22 @@
+# Compiled files
+*.o
+obj/
+
+# Binary
+libasm.a
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+
+# Archives
+*.tar.gz
+*.zip
+
+idea.md
+CLAUDE.md

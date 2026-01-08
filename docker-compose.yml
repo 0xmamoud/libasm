@@ -1,0 +1,9 @@
+services:
+  libasm:
+    build: .
+    container_name: libasm
+    volumes:
+      - .:/libasm
+    stdin_open: true
+    tty: true
+    command: /bin/bash
