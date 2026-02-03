@@ -57,16 +57,18 @@ test: all
 	@echo "$(GREEN)Run ./test to execute$(RESET)"
 
 # Docker commands
+DOCKER_PLATFORM ?= linux/amd64
+
 docker-build:
-	@docker compose build
+	@DOCKER_DEFAULT_PLATFORM=$(DOCKER_PLATFORM) docker compose build
 
 docker-up:
-	@docker compose up -d
+	@DOCKER_DEFAULT_PLATFORM=$(DOCKER_PLATFORM) docker compose up -d
 
 docker-down:
-	@docker compose down
+	@DOCKER_DEFAULT_PLATFORM=$(DOCKER_PLATFORM) docker compose down
 
 docker-shell:
-	@docker compose exec libasm /bin/bash
+	@DOCKER_DEFAULT_PLATFORM=$(DOCKER_PLATFORM) docker compose exec libasm /bin/bash
 
 .PHONY: all clean fclean re test 

@@ -18,5 +18,6 @@ libasm.a
 *.tar.gz
 *.zip
 
-idea.md
 CLAUDE.md
+main
+
